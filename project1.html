@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SNB Project</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer>
+    </script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+
+
+<body>
+
+    <nav class="navbar navbar-expand-md container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="POWER web" class="logo"></a>
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav w-100 d-flex justify-content-between">
+                    <li class="nav-item flex-fill text-center">
+                        <a class="nav-link" href="index.html">home</a>
+                    </li>
+                    <li class="nav-item flex-fill text-center">
+                        <a class="nav-link" href="portfolio.html">portfolio</a>
+                    </li>
+                    <li class="nav-item dropdown flex-fill text-center">
+                        <a class="nav-link active dropdown-toggle" id="projectDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Projecten
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="project1.html">Project 1</a></li>
+                            <li><a class="dropdown-item" href="project2.html">Project 2</a></li>
+                            <li><a class="dropdown-item" href="project3.html">Project 3</a></li>
+                            <li><a class="dropdown-item" href="project4.html">Project 4</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item flex-fill text-center">
+                        <a class="nav-link active" href="certificaten.html">certificaten</a>
+                    </li>
+                    <li class="nav-item flex-fill text-center">
+                        <a class="nav-link" href="contact.html">contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1 class="text-center m-3">SNB Project</h1>
+    </header>
+    <div class="d-flex">
+    <main class="col-md-9 m-5 my-5">
+        <div class="row">
+            <h2>Beschrijving</h2>
+            <p>Voor dit project werkten we in groep van 4 personen. wij kregen voor onze groep de opdracht om voor de scholengroep KOBA Voorkempen een Single-Source-Of-Truth te bouwen. Maar buiten enkel informatie en documetnatie op te slaan in de SSOT wouden ze ook in de andere richting kunnen werken vanuit dezelfde locatie, zo moesten we er ook voor zorgen dat  we configuraties kunnen pushen naar netwerkdevices en een netwerkdiscovery kunnen doen om nieuwe devices te vinden en te importeren. Dit alles vanuit dezelfde interface.</p>
+            <p>Zo kregen we dus een aantal must haves en nice to haves opgesteld die in 2 delen waren verdeeld genaamd, Network controller en Network enrollment.</p>
+            <h4>Network controller</h4>
+            <p>Voor de Network controller was het belnagrijk dat we configuraties kunnen pushen zoals VLAN's, STP, access en trunk poorten enzovoort dat ook compatibel moest zijn met minstens 2 verschillende merken van switches. maar ook configuration drift kunnen detecteren een GUI hebben en eventueel uitgebreidere configuratiewas een pluspunt.</p>
+            <h4>Network enrollment</h4>
+            <p>Network enrollment was zoals de naam doet vermoeden meer gebaseerd op het importeren van nieuwe devices. zo was het hiervoor belangrijk dat er een netwerkscan gedaan kan worden die nieuwe devices kan vinden en al hun info kan meenemen en ook een topologie van kan maken om een duidelijk beeld te krijgen wat er met wat is verbonden. Als pluspunt kregen we de taak om dit proces zoveel mogelijk te laten automatiseren.</p>
+        </div>
+        <figure class="rechts">
+            <img src="assets/images/EVE-NG.png" width="440px" alt="EVE-NG topologie">
+            <figcaption>&copy; netwerkopbouw</figcaption>
+        </figure>
+        <div class="row">
+            <h2>Tools</h2>
+            <p>Eerst en vooral moesten we nu gaan uitzoeken welke tools we gaan gebruiken, aangezien het voor een school was en ze geen al te groot budget hebben mochten we enkel gebruik maken van open source tools en hadden we geen budget voor betalende opties. Na uitgebreid onderzoek zijn we terecht gekomen op de volgende tools:</p>
+            <ul class="m-3">
+                <li>EVE-NG = virtualisatie</li>
+                <li>Netdisco = netwerkscan/detectie</li>
+                <li>Zabbix = monitoring</li>
+                <li>Nautobot = SSOT</li>
+            </ul>
+        </div>
+        <div class="row">
+            <h2>EVE-NG</h2>
+            <p>Omdat we niet altijd de mogelijkheid hadden om met hardware te kunnen werken en we ervoor moesten zorgen dat het met minstens 2 verschillende merken compatibel was en we daar op school niet altijd de mogelijkheid toe hadden, hebben we ervoor gekozen om EVE-NG te gebruiken als simulatie tool. Hier kunnen we images in uploaden van echte fysieke hardware maar dan virtueel zodat het hetzelfde werkt alsof je er echt mee bezig bent. Hierin hebben we dus een klein netwerkje opgesteld met een router van Mikrotik en één van Cisco. Voor switches hebben we er 2 van Arista en 1 van Aruba gebruikt om zoveel mogelijk verschillende merken te kunnen aantonen.</p>
+        </div>
+        <figure class="rechts">
+            <img src="assets/images/netdisco.png" width="400px" alt="Netdisco topologie">
+            <figcaption>&copy; netwerktopologie</figcaption>
+        </figure>
+        <div class="row">
+            <h2>Netdisco</h2>
+            <p>Voor het uitvoeren van een netwerkscan om nieuwe devices te vinden op het netwerk hebben we gekozen voor Netdisco. Deze tool kan je een scan laten uitvoeren op basis van één of meerdere IP adressen die je meegeeft of kan ook een volledig subnet scannen. Hij maakt dan één voor één een snmp connectie met de toestellen en haalt er zo al de geconfigureerde info uit en ziet ook wie er met wie en op welke poorten zijn verbonden. met deze info kan het dus een topologie maken en krijg je een visueel beeld hoe je netwerk is opgebouwd.</p>
+        </div>
+        <div class="row">
+            <h2>Zabbix</h2>
+            <p>Als monitoring tool hebben we gekozen voor Zabbix omdat de projectgever had aangekaart dat ze dit momenteel ook al gebruikten en wij hier op school ook al mee hebben leren werken. De nieuwe devices die in zabbix terecht komen worden automatisch via een script aan een template gekoppelt zodat Zabbix automatisch begint met het monitoren van de nieuwe netwerkdevices. Als er een probleem is word dit via een API token ook direct doorgestuurd naar Nautobot om zo al de info daar te kunnen zien en je dus niet op Zabbix zelf hoeft in te loggen.</p>
+            <figure class="rechts">
+                <img src="assets/images/alert.png" width="700px" alt="Zabbix alert">
+                <figcaption>&copy; Zabbix alert in Nautobot</figcaption>
+            </figure>
+        </div>
+        <div class="row">
+            <h2>Nautobot</h2>
+            <p>Na enige tijd van twijfel hebben we besloten om te kiezen voor Nautobot in de plaats van voor Netbox. wat voor ons de doorslag was, was dat Nautobot ons meer vrijheid kon geven op vlak van configureren wat voor dit project een hele belangrijke was. We gebruiken dit dan als onze SSOT waar uiteindelijk alles in terecht gaat komen en alles kan aansturen. Hiervoor moeten de verschillende tools ook met elkaar kunnen spreken en daar werkten we vooral mat API webhooks en ssh verbindingen die worden aangestuurd door jobs en Python-scripts.</p>
+            <h3>Implementatie nieuwe devices</h3>
+            <p>Eerst moet dus de informatie die is gevonden door Netdisco binnengehaald worden, hiervoor hebben we een Python-script gemaakt die verbinding maakt met Netdisco en de database uitleest en de benodigde info meeneemt. Ook is er een check ingeschreven die nakijkt of dat device al in Nautobot staat zodat er geen dubbele devices in komen te staan. Na dat we de devices in Nautobot hebben kan deze nu zelf verbinding maken met de netwerkdevices en maakt een SNMP verbinding om zo de extra gegevens die niet van Netdisco worden meegenomen uit te lezen zoals interface-info en VLAN's. Ook maken we gebruik van een ingebouwde plugin genaamd "golden config" die een ssh verbinding maakt met het device en er de running config uithaalt en zowel opslaagd in de database van Nautobot maar ook in de cloud op github. Dit word ook elke keer vervangen als die job runt zodat de info altijd up-to-date is.</p>
+            <figure class="rechts">
+                <img src="assets/images/devices.png" width="1000px" alt="Nautobot devices">
+                <figcaption>&copy; Devices in Nautobot</figcaption>
+            </figure>
+            <p>De laatste stap die nu moet gebeuren is om de devices naar Zabbix te sturen. Dit word net zoals bij het script van Netdisco gedan met een Python-script en checkt ook op duplicaten. De nieuwe devices worden ook automatisch aan een template gekoppelt zodat Zabbix meteen kan starten met het monitoren. Ook is er een constante verbinding tussen Nautobot en Zabbix via een API Token die live doorgeeft aan Nautobot of er problemen zijn met het device of niet.</p>
+            <p>Om deze scripts allemaal aan te kunnen sturen heb je in de webinterface van Nautobot een tabblad "Jobs", hiervoor moet je ook scripts in een bepaalde template die verwijzen naar de Python-scripts zodat je deze kan besturen vanuit de webinterface en dus niets in de terminal hoeft te doen. het voordeel aan de scripts apart te zetten is dat we tot slot nog een job aangemaakt hebben die één voor één alle script aanstuurd om het hele proces te automatiseren en Netdisco ook kan aansturen vanuit Nautobot.</p>
+            <h3>Configuratie</h3>
+            <p>Voor de configuratie van de devices maken we ook gebruik van zelfgemaakte Python-scripts die je kan aansturen vanuit de webinterface met een job, waar je ook je informatie in kan zetten welk je wilt configureren op welke interface. Dit geeft ons de totale vrijheid in hoeverre je wilt kunnen gaan qua configuratie. Voor ons project hebben we het gehouden op het configureren van VLAN's, STP, IP adressen en trunk/access poorten voor switches. Voor routers hebben we ervoor gezorgd dat we IP adressen en routes kunnen instellen.</p>
+            <figure class="rechts">
+                <img src="assets/images/jobs.png" width="1000px" alt="Nautobot jobs">
+                <figcaption>&copy; Jobs in Nautobot</figcaption>
+            </figure>
+        </div>
+        <div class="video-container">
+            <h2>Demo</h2>
+            <iframe width="560" height="315" 
+                    src="https://youtube.com/embed/mcNfpoZYlb4" 
+                    title="Project demo"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </main>
+
+    <aside class="col-md-2 m-3 border-start ps-3">
+        <div class="col-12">
+            <h2>Contactgegevens</h2>
+            <ul>
+            <li><strong>Telefoon:</strong> +32 488 92 00 42</li>
+            <li><strong>E-mail:</strong> <a>jelle.vandenbroeck01@outlook.com</a></li>
+            <li><strong>Locatie:</strong> Kalmthout, België</li>
+            </ul>
+            <ul class="list-inline socials">
+            <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/jelle-van-den-broeck-ba1ba3195" target="_blank">
+                <i class="bi bi-linkedin kleur fs-6"></i>
+                </a>
+            </li>
+            </ul>
+        </div>
+    </aside>
+    </div>
+    <footer class="container-fluid bg-light text-center h6 small p-4 mt-5">&copy; <span id="year"></span> Jelle Van den Broeck</footer>
+
+
+</body>
+</html>

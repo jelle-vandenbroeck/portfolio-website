@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Createch</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer>
+    </script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+
+
+<body>
+
+    <nav class="navbar navbar-expand-md container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="POWER web" class="logo"></a>
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav w-100 d-flex justify-content-between">
+                    <li class="nav-item flex-fill text-center">
+                        <a class="nav-link" href="index.html">home</a>
+                    </li>
+                    <li class="nav-item flex-fill text-center">
+                        <a class="nav-link" href="portfolio.html">portfolio</a>
+                    </li>
+                    <li class="nav-item dropdown flex-fill text-center">
+                        <a class="nav-link active dropdown-toggle" href="#" id="projectDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Projecten
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="project1.html">Project 1</a></li>
+                            <li><a class="dropdown-item" href="project2.html">Project 2</a></li>
+                            <li><a class="dropdown-item" href="project3.html">Project 3</a></li>
+                            <li><a class="dropdown-item" href="project4.html">Project 4</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item flex-fill text-center">
+                        <a class="nav-link active" href="certificaten.html">certificaten</a>
+                    </li>
+                    <li class="nav-item flex-fill text-center">
+                        <a class="nav-link" href="contact.html">contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<header class="container project-header">
+    <p></p>
+    <h1 class="text-center m-3">Createch</h1>
+</header>
+<div class="row">
+    <main class="col-md-9 m-3 my-5">
+        <div class="row">
+            <h2>Beschrijving</h2>
+            <p>Voor dit project heb ik in een team van drie personen samengewerkt om een netwerk op te bouwen in Cisco Packet Tracer volgens de noden van Enterprise Networking. Zo bouwden we een redundant netwerken die geconfigureerd werd met onder andere STP protocollen. Maar ook hielden we rekening met beveiliging en stelden we DHCP Snooping en VLAN Hopping in.</p>
+            <p>Dit project stond op een heel groot deel van de punten voor dit vak. Daardoor werden we niet alleen beoordeeld op het eindresultaat maar ook op documentatie en op het individuele werk. We moesten proffesioneel handelen en een een actieplan en een testplan up-to-date houden en op een proffesionele manier met elkaar communiceren en aan versiebeheer doen. Buiten het groepswerk kregen we ook een aantal individuele taken die we moesten doen nadat het groepswerk klaar was. Dit hield in om DHCP in te stellen en ipv6 adressen in te stellen waar mogelijk omdat we dit al in een eerder behaald vak hebben geleerd en dit dus zelfstandig moeten kunnen uitvoeren.</p>
+        </div>
+        <figure class="rechts">
+            <img src="assets/images/createch.png" width="500px">
+            <figcaption>&copy; Createch</figcaption>
+        </figure>
+        <div class="row">
+            <h2>Te configureren doelstellingen:</h2>
+            <ul class="m-3">
+                <li>Link Aggregation</li>
+                <li>Spanning Tree Protocol</li>
+                <li>Port Security</li>
+                <li>VLAN Hopping</li>
+                <li>DHCP Snooping</li>
+                <li>Dynamic ARP Inspection</li>
+                <li>OSPF Routing</li>
+            </ul>
+            <p>Voor de interne werking van het netwerk moesten we 2 VLAN's maken (VLAN 100, VLAN 200)waar endpoints aan te hangen kwamen met een BYOD beleid, deze VLAN's moesten strict gescheiden blijven van elkaar zodat er geen interactie mogelijk is. Dit word gedaan omdat VLAN 100 voor intern was en VLAN 200 extern, daarvoor mag dus enkel intern toegang krijgen tot het datacenter. Hiervoor hebben we gewerkt met ACL's op de routers die verbonden zijn met het datacenter om verkeer van het externe VLAN te blokkeren.</p>
+        </div>
+    </main>
+
+    <aside class="col-md-2 m-3 border-start">
+        <div class="col-12">
+            <h2>Contactgegevens</h2>
+            <ul>
+            <li><strong>Telefoon:</strong> +32 488 92 00 42</li>
+            <li><strong>E-mail:</strong> <a>jelle.vandenbroeck01@outlook.com</a></li>
+            <li><strong>Locatie:</strong> Kalmthout, België</li>
+            </ul>
+            <ul class="list-inline socials">
+            <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/jelle-van-den-broeck-ba1ba3195" target="_blank">
+                <i class="bi bi-linkedin kleur fs-6"></i>
+                </a>
+            </li>
+            </ul>
+        </div>
+    </aside>
+</div>
+<footer class="container-fluid bg-light text-center h6 small p-4 mt-5">&copy; <span id="year"></span> Jelle Van den Broeck</footer>
+
+
+</body>
+</html>

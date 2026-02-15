@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/map.js" defer></script>
+  <link rel="stylesheet" href="css/map.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md container-fluid">
+    <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="POWER web" class="logo"></a>
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav w-100 d-flex justify-content-between">
+                <li class="nav-item flex-fill text-center">
+                    <a class="nav-link" href="index.html">home</a>
+                </li>
+                <li class="nav-item flex-fill text-center">
+                    <a class="nav-link" href="portfolio.html">portfolio</a>
+                </li>
+                <li class="nav-item dropdown flex-fill text-center">
+                    <a class="nav-link dropdown-toggle" href="#" id="projectDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Projecten
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="project1.html">Project 1</a></li>
+                        <li><a class="dropdown-item" href="project2.html">Project 2</a></li>
+                        <li><a class="dropdown-item" href="project3.html">Project 3</a></li>
+                        <li><a class="dropdown-item" href="project4.html">Project 4</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item flex-fill text-center">
+                    <a class="nav-link active" href="certificaten.html">certificaten</a>
+                </li>
+                <li class="nav-item flex-fill text-center">
+                    <a class="nav-link active" href="contact.html">contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+  <header class="container text-center my-5">
+    <h1>Contact</h1>
+  </header>
+
+
+  <main class="container mb-5">
+    <div class="row">
+
+      <div class="col-md-9 d-flex">
+        <figure>
+          <img src="assets/images/pasfoto.PNG" alt="Profielfoto" width="150px" class="links">
+          <figcaption>&copy;Jelle Van den Broeck</figcaption>
+        </figure>
+        <div class="content-text">
+          <h2>Bedankt voor uw bezoek!</h2>
+          <p>Hartelijk dank dat u de tijd heeft genomen om mijn website te bezoeken. Het betekent veel voor mij dat u interesse toont in wat ik te bieden heb. Ik hoop dat u heeft gevonden wat u zocht en dat de inhoud u kon inspireren, informeren of gewoonweg plezier heeft gebracht.</p>
+          <p>Uw bezoek motiveert me om deze website steeds verder te verbeteren en uit te breiden. Aarzel niet om contact met me op te nemen als u vragen heeft, meer informatie wenst of feedback wilt delen. Ik sta altijd open voor suggesties en hoor graag van u.</p>
+          <p>Nogmaals bedankt en ik hoop u in de toekomst opnieuw te mogen verwelkomen!</p>
+        </div>
+      </div>
+
+      <aside class="col-md-3 border-start ps-3">
+        <div class="col-12">
+          <h2>Contactgegevens</h2>
+          <ul>
+            <li><strong>Telefoon:</strong> +32 488 92 00 42</li>
+            <li><strong>E-mail:</strong> <a>jelle.vandenbroeck01@outlook.com</a></li>
+            <li><strong>Locatie:</strong> Kalmthout, België</li>
+          </ul>
+          <ul class="list-inline socials">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/jelle-van-den-broeck-ba1ba3195" target="_blank">
+                <i class="bi bi-linkedin kleur fs-6"></i>
+              </a>
+            </li>
+          </ul>
+          <div id="map"></div>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="container-fluid bg-light text-center h6 small p-4 mt-5">&copy; <span id="year"></span> Jelle Van den Broeck</footer>
+
+    
+  </main>
+
+  
+
+
+
+</body>
+</html>
+

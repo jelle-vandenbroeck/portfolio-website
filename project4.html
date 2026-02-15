@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer>
+    </script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+
+
+<body>
+
+    <nav class="navbar navbar-expand-md container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="POWER web" class="logo"></a>
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav w-100 d-flex justify-content-between">
+                    <li class="nav-item flex-fill text-center">
+                        <a class="nav-link" href="index.html">home</a>
+                    </li>
+                    <li class="nav-item flex-fill text-center">
+                        <a class="nav-link" href="portfolio.html">portfolio</a>
+                    </li>
+                    <li class="nav-item dropdown flex-fill text-center">
+                        <a class="nav-link active dropdown-toggle" href="#" id="projectDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Projecten
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="project1.html">Project 1</a></li>
+                            <li><a class="dropdown-item" href="project2.html">Project 2</a></li>
+                            <li><a class="dropdown-item" href="project3.html">Project 3</a></li>
+                            <li><a class="dropdown-item" href="project4.html">Project 4</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item flex-fill text-center">
+                        <a class="nav-link active" href="certificaten.html">certificaten</a>
+                    </li>
+                    <li class="nav-item flex-fill text-center">
+                        <a class="nav-link" href="contact.html">contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container">
+        <p></p>
+        <h1 class="text-center">Cybersecurity</h1>
+    </header>
+    <div class="row">
+        <main class="col-md-9 m-3 my-5">
+            <div class="row">
+                <h2>Overzicht</h2>
+                <p>Voor zowel Cybersecurity intro als voor Cybersecurity hebben we een onderzoeksopdracht gekregen waar we een paper voor hebben geschreven en een kleine praktische video-demo gemaakt. We kregen verschillende onderwerpen waar we uit mochten kiezen en moesten hier een top drie voor maken met een motivatie waarom we voor deze onderwerpen kozen. Hiermee maakte de leerkracht dan een beslissing welke je kreeg en of je motivatie goed genoeg was als er meerdere studenten die onderwerpen wouden. Voor Cybersecurity intro kreeg ik het onderwerp Microsoft Defender Application Control (MDAC/WDAC). Voor Cybersecurity heb ik het onderwerp Muraena gekregen.</p>
+                <p></p>
+            </div>
+            <figure class="rechts">
+                <img src="assets/images/mdac.png" width="500px">
+                <figcaption>&copy;pop-up</figcaption>
+            </figure>
+            <div class="row">
+                <h2>Microsoft Defender Application Control (MDAC/WDAC)</h2>
+                <p>Microsoft Defender Application Control is een ingebouwde beveiligingsmaatregel die standaard in elke moderne windows operating system zit. Het zorgt er namens voor dat je als System admin rechten kan instellen per device of per user om bepaalde applicaties te kunnen blokkeren. Zo wil je bijvoorbeeld dat eindgebruikers geen Powershell of Command Prompt mogen openen en gebruiken, dit kan je dan heel gemakkelijk gaan instellen in bijvoorbeeld GPO's als je met Active Directory werkt of op de pc zelf in AppLocker of als je in de cloud werkt kan het ook via Microsoft Intune.</p>
+                <a href="assets/documenten/MDAC.pdf" target="_blank" class="knop">Open PDF</a>
+                <p></p>
+            </div>
+            <div class="video-container">
+                <h2>Demo</h2>
+                <iframe width="560" height="315" 
+                        src="https://youtube.com/embed/fFCgE6wJs2E" 
+                        title="Project demo"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+            <figure class="rechts">
+                <img src="assets/images/muraena.png" width="300px">
+                <figcaption>Muraena</figcaption>
+            </figure>
+            <div class="row">
+                <h2>Muraena</h2>
+                <p>Muraena is een moderne bijna transparante reverse proxy phishing toolkit die gemaakt is om phishing campagnes zoveel mogelijk te kunnen automatiseren. Het steelt de sessie-tokens van het slachtoffer en kan met de samenwerking van Necrobrowser de sessie overnemen. Als het slachtoffer op de phishing link klikt word hij/zei omgezeild naar het phishing-domein die er exact hetzelfde uitziet als de echte inlogpagina en word nadien wel naar het juiste domein geleid zodat die er niets van merkt omdat alle gegevens door Muraena worden doorgestuurd naar het echte domein en het slachtoffer dus daar aanmeld. Door Muraena te laten samenwerken met Necrobrowser worden de gegevens naar Necrobrowser gestuurd en gaat die met de gestolen tokens aanmelden op de website en kan bijvoorbeeld de onedrive volledig downloaden met alle documenten die daarop staan of een screenshot maken als bewijs voor de phishing campagne.</p>
+                <a href="assets/documenten/Muraena.pdf" target="_blank" class="knop">Open PDF</a>
+            </div>
+            <div class="video-container">
+                <h2>Demo</h2>
+                <iframe width="560" height="315" 
+                        src="https://youtube.com/embed/3AieaXg92N8" 
+                        title="Project demo"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </main>
+    <aside class="col-md-2 m-3 border-start">
+        <div class="col-12">
+            <h2>Contactgegevens</h2>
+            <ul>
+            <li><strong>Telefoon:</strong> +32 488 92 00 42</li>
+            <li><strong>E-mail:</strong> <a>jelle.vandenbroeck01@outlook.com</a></li>
+            <li><strong>Locatie:</strong> Kalmthout, België</li>
+            </ul>
+            <ul class="list-inline socials">
+            <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/jelle-van-den-broeck-ba1ba3195" target="_blank">
+                <i class="bi bi-linkedin kleur fs-6"></i>
+                </a>
+            </li>
+            </ul>
+        </div>
+    </aside>
+    </div>
+    <footer class="container-fluid bg-light text-center h6 small p-4 mt-5">&copy; <span id="year"></span> Jelle Van den Broeck</footer>
+
+</body>
+</html>
